@@ -1,0 +1,42 @@
+@model IEnumerable<Veterinaria.Models.Product>
+@{
+    Layout = "/Views/_Layout.cshtml";
+    var cat = ViewBag.Categoria as string;
+}
+<h2>Productos @if (!string.IsNullOrWhiteSpace(cat)) { <text> - @cat</text> }</h2>
+
+@if (TempData["msg"] != null) {
+    <p><strong>@TempData["msg"]</strong></p>
+}
+
+<p>Filtrar por categoría: 
+    <a href="/Products">Todas</a> | 
+    <a href="/Products?categoria=alimento">Alimento</a> | 
+    <a href="/Products?categoria=higiene">Higiene</a> | 
+    <a href="/Products?categoria=accesorio">Accesorios</a>
+</p>
+
+<table>
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nombre</th>
+            <th>Categoría</th>
+            <th>Precio</th>
+            <th>Stock</th>
+            <th>Descripción</th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model) {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Nombre</td>
+            <td>@p.Categoria</td>
+            <td>@p.Precio</td>
+            <td>@p.Stock</td>
+            <td>@p.Descripcion</td>
+        </tr>
+    }
+    </tbody>
+</table>

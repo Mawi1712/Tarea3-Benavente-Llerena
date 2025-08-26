@@ -1,0 +1,32 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veterinaria</title>
+    <link rel="stylesheet" href="/site.css" />
+</head>
+<body>
+    <header>
+        <h1>Veterinaria</h1>
+        <nav>
+            <a href="/">Inicio</a> |
+            <a href="/Pets/Registrar">Registrar Mascota</a> |
+            <a href="/Pets/Lista">Lista de Mascotas</a> |
+            <a href="/Products">Productos</a> |
+            <a href="/Products/Crear">Agregar Producto</a>
+        </nav>
+        <hr/>
+    </header>
+    <main>
+        @RenderBody()
+    </main>
+    <footer>
+        <hr/>
+        <small>Proyecto de ejemplo - Ramas Git</small>
+    </footer>
+</body>
+</html>

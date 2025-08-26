@@ -1,0 +1,26 @@
+@model Veterinaria.Models.Pet
+@{
+    Layout = "/Views/_Layout.cshtml";
+}
+<h2>Registrar Mascota</h2>
+<form method="post">
+    <label>Nombre</label><br/>
+    <input name="Nombre" /><br/><br/>
+
+    <label>Especie</label><br/>
+    <input name="Especie" placeholder="Perro, Gato, etc." /><br/><br/>
+
+    <label>Edad</label><br/>
+    <input type="number" name="Edad" /><br/><br/>
+
+    <label>Propietario</label><br/>
+    <input name="Propietario" /><br/><br/>
+
+    <label>Teléfono</label><br/>
+    <input name="Telefono" /><br/><br/>
+
+    <label>Observaciones</label><br/>
+    <textarea name="Observaciones"></textarea><br/><br/>
+
+    <button type="submit">Guardar</button>
+</form>
